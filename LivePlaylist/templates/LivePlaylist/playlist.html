@@ -1,7 +1,44 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
-    <head></head>
-    <body>
-        playlist page
-    </body>
+<head>
+    <title>실시간 공유 플레이리스트</title>
+    <link rel="stylesheet" href="{% static 'LivePlaylist/LivePlaylist.css' %}">
+</head>
+<body>
+	<div id="search__container">
+		<p class="search__title">
+			<img class="picsong" src="{% static 'LivePlaylist/song.png' %}">
+			실시간 공유 플레이리스트
+		</p>
+		<input class="search__input" type="text" placeholder="Search">
+
+		<div class="search__btn">
+			<button href='#'>search</button>
+		</div>
+	</div>
+
+	<div id="main">
+		<div id="list">
+			<h1>playlist🎶</h1>
+			<p>22 - taylor swift<br>
+				Never not - lauv<br>
+				This is life - 문성남<br>
+				어떻게 지내(Prod. By VAN.C) - 오반<br>
+				Into the I-LAND - 아이유(IU)<br>
+				Moral of the Story - Ashe<br>
+				Let Go - 방탄소년단<br>
+			</p>
+		</div>
+
+		<div id="result">
+			<h1>검색결과😆</h1>
+			<p>
+				<iframe width="240"  src="https://www.youtube.com/embed/ioNng23DkIM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+				<iframe width="240" src="https://www.youtube.com/embed/5PW3LidySSk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+				<iframe width="240"  src="https://www.youtube.com/embed/xoEX8w5ly-c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</p>
+		</div>
+	</div>
+</body>
 </html>
