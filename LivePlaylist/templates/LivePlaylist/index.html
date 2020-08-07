@@ -14,13 +14,24 @@
         <!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
         <!-- <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet"> -->
         <!-- <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet"> -->
+        <style>
+            /* a태그 초기화 */
+            a {
+                color: #fff;
+                text-decoration: none;
+                outline: none;
+            }
+            a:active,a:hover {
+                text-decoration: none;
+                color: #fff;
+            }
+        </style>
     </head>
     <body>
         <div id="header">
             <img class="picsong" src="{% static 'LivePlaylist/song.png' %}">
             실시간 공유 플레이리스트
         </div>
-    
-        <div class="button"><a href="{% url 'LivePlaylist/playlist' %}">make new !</a></div>
+        <a class="button" href="{% url 'playlist' %}">make new !</a>
     </body>
 </html>
