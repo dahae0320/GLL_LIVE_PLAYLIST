@@ -49,7 +49,7 @@ body {
   left: 42%;*/
     margin-left: 40%;
     margin-right: 40%;
-    margin-bottom: 10%;
+    /*margin-bottom: 10%;*/
     font-family: 'NeoDunggeunmo'; 
     font-size: 30px;
 
@@ -167,9 +167,7 @@ span:hover + p.arrow_box {
         margin-top: 100px;
         padding-bottom: 0px;
     }
-    hr{
-        width: 80%;
-    }
+ 
     #menu {
         width: 200px;
         margin: 40px auto;
@@ -185,6 +183,7 @@ span:hover + p.arrow_box {
 }
 
 .seperate{
-    width: 70%;
+    width: 100px;
+    height: 5px;
     color: red;
 }
