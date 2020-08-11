@@ -66,6 +66,8 @@ body {
     background: #f3f3f3;
     border: 1px solid #d8d8d8;
     text-align: center;
+    float: left;
+
 }
 #menu div {
     position: relative;
@@ -176,4 +178,13 @@ span:hover + p.arrow_box {
         border: 1px solid #d8d8d8;
         text-align: center;
     }
+}
+.maker{
+    float: left;
+	
+}
+
+.seperate{
+    width: 70%;
+    color: red;
 }
