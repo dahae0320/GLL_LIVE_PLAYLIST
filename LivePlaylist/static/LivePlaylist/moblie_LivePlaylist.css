@@ -1,0 +1,11 @@
+.search__title {
+    font-size:20px;
+}
+
+.search__input {
+    width: 80%;
+}
+
+.playlist, .result {
+    font-size: 15px;
+}

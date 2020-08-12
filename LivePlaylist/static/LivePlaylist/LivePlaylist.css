@@ -11,9 +11,8 @@
 /* Base styling */
 
 body {
-    width: 430px;
-    margin: 0 auto;
-    background-color:white;
+    /* width: 430px;
+    margin: 0 auto; */
     font-family: 'Raleway', sans-serif;
 }
 
@@ -48,7 +47,9 @@ body {
 } */
 
 .search__container {
-    padding-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .search__title {
@@ -64,7 +65,7 @@ body {
 }
 
 .search__input {
-    width: 100%;
+    width: 40%;
     padding: 12px 24px;
 
     background-color: transparent;
@@ -100,8 +101,6 @@ body {
     background-position: 100% center; 
 }
 
-
-
 .search__btn {
     position: absolute;
     width: 125px;
@@ -123,12 +122,18 @@ body {
     width: 120px;
 }
 
-#list {
-    position: absolute;
-    width: 500px;
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.playlist, .result {
+    /* width: 500px;
     height: 550px;
     left: 155px;
-    top: 180px;
+    top: 180px; */
+    
+    margin: 20px;
     font-family: 'Recipekorea';
     background-color: #fffcf0;
     line-height: 35px;
@@ -136,27 +141,4 @@ body {
     padding: 40px;
     font-size: 25px;
     border-radius: 255px 15px 225px 15px/15px 225px 15px;
-}
-
-#list > h1 {
-    font-size: 30px;
-}
-
-#result {
-    position: absolute;
-    width: 500px;
-    height: 550px;
-    left: 800px;
-    top: 183px;
-    font-family: 'Recipekorea';
-    background-color: #fffcf0;
-    line-height: 35px;
-    border: solid 6px #dedcee;
-    padding: 40px;
-    font-size: 25px;
-    border-radius: 255px 15px 225px 15px/15px 225px 15px;
-}
-
-#result > h1 {
-    font-size: 30px;
 }
