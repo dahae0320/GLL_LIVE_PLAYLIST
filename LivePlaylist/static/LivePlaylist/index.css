@@ -112,9 +112,10 @@ span {
 .arrow_box {
   display: none;
   position: absolute;
-  width: 100px;
+  bottom: 60px;
+  width: 150px;
   padding: 8px;
-  left: 0;
+  left: -30px;
 /* 브라우저 별 접두어
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;   */
@@ -126,20 +127,20 @@ span {
 /* 화살표 꼬리 */
 .arrow_box:after {
   position: absolute;
-  bottom: 100%;
+  top: 95px;
   left: 50%;
   width: 0;
   height: 0;
   margin-left: -10px;
-  border: solid transparent;
+  /* border: solid transparent;
   border-color: rgba(51, 51, 51, 0);
-  border-bottom-color: #ECEBEB;
+  border-bottom-color: #ECEBEB; */
   border-width: 10px;
 /*     꼬리 방향 바꾸기 */
-  /* border-top: 10px solid #ECEBEB;
+  border-top: 10px solid #ECEBEB;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 0px solid yello;*/
+  border-bottom: 0px solid yello;
   pointer-events: none;
   content: " "; 
 }
