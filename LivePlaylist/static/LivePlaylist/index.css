@@ -10,7 +10,21 @@
     font-weight: normal; 
     font-style: normal; 
 }
-
+@font-face {
+    font-family: 'Handon3gyeopsal300g';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Handon3gyeopsal300g.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+           
+@font-face {
+    font-family: 'Handon3gyeopsal600g';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Handon3gyeopsal600g.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+           
+            
 #header {
     text-align: center;
     font-family: 'Recipekorea';
@@ -86,6 +100,14 @@ body {
     height: auto;
     border-color: black solid 2px;
 }
+.maker1{
+    font-family: 'Handon3gyeopsal600g';
+    font-size: 20px;
+}
+.maker2{
+    font-family: 'Handon3gyeopsal300g';
+    font-size: 13px;
+}
 
 #menu {
     width: 150px;
@@ -100,6 +122,8 @@ body {
 #menu div {
     position: relative;
     display: inline-block;
+    font-family: 'Handon3gyeopsal600g';
+    font-family: 40px;
 }
 
 span {
@@ -121,7 +145,7 @@ span {
   -moz-border-radius: 8px;   */
   border-radius: 8px;
   background: #ECEBEB;
-  font-color: #333;
+  color: #333;
   font-size: 14px;
 }
 /* 화살표 꼬리 */
