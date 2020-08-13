@@ -59,13 +59,39 @@ body {
     -webkit-transform: translate(0px, -10px) scale(1.2);
     transform: translate(0px, -10px) scale(1.2);
 }
+/* 경계선 */
+.seperate{
+    display: inline-block;
+    width: 80%;
+    height: 2px;
+    background-color: rgb(104, 103, 103);
+    border-radius: 8px;
+    margin-top: 3em;
+
+}
+/* 푸터 */
+
+#wrapper{
+    display: inline-block;
+}
+#wrapper::after{
+    clear: both;
+
+}
+
+.maker{
+    float: left;
+    width: 40%;
+    height: auto;
+}
 
 #menu {
-    width: 200px;
-    margin: 40px auto;
-    background: #f3f3f3;
-    border: 1px solid #d8d8d8;
+    width: 150px;
+    height: 50px;
+    margin: 40px ;
+    background: #d2d2d2;
     text-align: center;
+    border-radius: 8px;
     float: left;
 
 }
@@ -75,41 +101,43 @@ body {
 }
 
 span {
-    display: block;
+    display: inline-block;
     width: 80px;
-    padding: 2px 16px;
+    padding: 16px 16px;
     cursor: pointer;
 }
+/* 말풍선박스설정 */
 .arrow_box {
   display: none;
   position: absolute;
-  bottom: 40px;
-  width: 150px;
+  width: 100px;
   padding: 8px;
-  left: -34px;
+  left: 0;
+/* 브라우저 별 접두어
   -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;  
+  -moz-border-radius: 8px;   */
   border-radius: 8px;
-  background: #333;
-  color: #fff;
+  background: #ECEBEB;
+  font-color: #333;
   font-size: 14px;
 }
-
-.arrow_box::after {
+/* 화살표 꼬리 */
+.arrow_box:after {
   position: absolute;
-  bottom:-20px;
-  /* bottom: 100%; */
+  top: 100%;
   left: 50%;
   width: 0;
   height: 0;
   margin-left: -10px;
-  /* border: solid transparent; */
-  border-top: 10px solid #333; 
-  border-left: 10px solid transparent; 
-  border-right: 10px solid transparent; 
-  border-bottom: 0px solid transparent; 
-  /* border-color: rgba(0, 51, 51, 51); */
-  border-width: 10px;
+/*   border: solid transparent;
+  border-color: rgba(51, 51, 51, 0);
+  border-bottom-color: #ECEBEB;
+  border-width: 10px; */
+/*     꼬리 방향 바꾸기 */
+  border-top: 10px solid #ECEBEB;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 0px solid yello;
   pointer-events: none;
   content: " ";
 }
@@ -118,10 +146,10 @@ span:hover + p.arrow_box {
   display: block;
 }
 
-/* 푸터 */
-.footer {
-    width:100%;
-}
+
+
+
+
 /* 모바일 환경 */
 @media(max-width:800px){
     #header {
@@ -177,13 +205,4 @@ span:hover + p.arrow_box {
         text-align: center;
     }
 }
-.maker{
-    float: left;
-	
-}
 
-.seperate{
-    width: 100px;
-    height: 5px;
-    color: red;
-}
