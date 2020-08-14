@@ -88,6 +88,7 @@ body {
 #wrapper{
     display: inline-block;
     margin-top: 100px;
+    width: 100%;
 }
 #wrapper::after{
     clear: both;
@@ -96,7 +97,7 @@ body {
 
 .maker{
     float: left;
-    width: 40%;
+    width: 50%;
     height: auto;
     border-color: black solid 2px;
 }
