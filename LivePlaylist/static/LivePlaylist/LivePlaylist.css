@@ -34,6 +34,7 @@
     font-weight: 900;
     text-align: center;
     font-family: 'Recipekorea';
+    margin-top: 1rem;
     /* color: #ff8b88; */
 }
 .picsong {
@@ -122,6 +123,9 @@
     border-radius: 255px 15px 225px 15px/15px 225px 15px; */
     width: 40% !important;
     background-color: pink;
+    margin-top: 20px;
+    padding-top: 1rem;
+    
 }
 
 .music_player {
