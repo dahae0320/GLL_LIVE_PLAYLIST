@@ -4,13 +4,21 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face { 
+    font-family: 'NeoDunggeunmo'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
 
 #header {
     text-align: center;
     font-family: 'Recipekorea';
-    font-size: 50px;
-    padding: 100px;
+    font-size: 70px;
+    padding-top: 100px;
+    padding-bottom: 250px;
     margin-bottom: auto;
+    
 }
 
 .picsong {
@@ -21,6 +29,8 @@
 body {
     text-align: center;
     padding: 200px;
+    padding-top: 150px;
+    padding-bottom: 0px;
 }
 
 .button {
@@ -28,7 +38,7 @@ body {
     background: #EB8E8E;
     color: #fff;
     /*text-transform: uppercase;*/
-    padding: 20px 30px;
+    padding: 15px 20px;
     border-radius: 5px;
     box-shadow: 0 17px 10px -10px rgba(0, 0, 0, 0.4);
     cursor: pointer;
@@ -37,12 +47,144 @@ body {
     text-align: center;
     /*  position: relative;
   left: 42%;*/
-    margin-left: 45%;
+    margin-left: 40%;
     margin-right: 40%;
-    font-family: 'Courgette', cursive;
+    margin-bottom: 10%;
+    font-family: 'NeoDunggeunmo'; 
+    font-size: 30px;
+
 }
 .button:hover {
     box-shadow: 0 37px 20px -20px rgba(0, 0, 0, 0.2);
     -webkit-transform: translate(0px, -10px) scale(1.2);
     transform: translate(0px, -10px) scale(1.2);
+}
+
+#menu {
+    width: 200px;
+    margin: 40px auto;
+    background: #f3f3f3;
+    border: 1px solid #d8d8d8;
+    text-align: center;
+    float: left;
+
+}
+#menu div {
+    position: relative;
+    display: inline-block;
+}
+
+span {
+    display: block;
+    width: 80px;
+    padding: 2px 16px;
+    cursor: pointer;
+}
+.arrow_box {
+  display: none;
+  position: absolute;
+  bottom: 40px;
+  width: 150px;
+  padding: 8px;
+  left: -34px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;  
+  border-radius: 8px;
+  background: #333;
+  color: #fff;
+  font-size: 14px;
+}
+
+.arrow_box::after {
+  position: absolute;
+  bottom:-20px;
+  /* bottom: 100%; */
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -10px;
+  /* border: solid transparent; */
+  border-top: 10px solid #333; 
+  border-left: 10px solid transparent; 
+  border-right: 10px solid transparent; 
+  border-bottom: 0px solid transparent; 
+  /* border-color: rgba(0, 51, 51, 51); */
+  border-width: 10px;
+  pointer-events: none;
+  content: " ";
+}
+
+span:hover + p.arrow_box {
+  display: block;
+}
+
+/* 푸터 */
+.footer {
+    width:100%;
+}
+/* 모바일 환경 */
+@media(max-width:800px){
+    #header {
+        text-align: center;
+        font-family: 'Recipekorea';
+        font-size: 45px;
+        padding: 0px;
+        margin-bottom: auto;
+        width: 300px;
+        margin-left: 10%;
+        margin-right: 20%;
+    }
+    body{
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-bottom: 0px;
+        height: 700px;
+    }
+    .picsong {
+        width: 50px;
+        height: 50px;
+    }
+    .button {
+        display: inline-block;
+        background: #EB8E8E;
+        color: #fff;
+        /*text-transform: uppercase;*/
+        padding: 15px 50px;
+        border-radius: 5px;
+        box-shadow: 0 17px 10px -10px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+        -webkit-transition: all ease-in-out 300ms;
+        transition: all ease-in-out 300ms;
+        text-align: center;
+        /*  position: relative;
+      left: 42%;*/
+        margin-left: 30%;
+        margin-right: 40%;
+        margin-top: 100px;
+        font-family: 'NeoDunggeunmo';
+    }
+    .footer{
+        margin-top: 100px;
+        padding-bottom: 0px;
+    }
+    hr{
+        width: 80%;
+    }
+    #menu {
+        width: 200px;
+        margin: 40px auto;
+        
+        background: #f3f3f3;
+        border: 1px solid #d8d8d8;
+        text-align: center;
+    }
+}
+.maker{
+    float: left;
+	
+}
+
+.seperate{
+    width: 70%;
+    color: red;
 }

@@ -4,29 +4,7 @@
     font-weight: normal;
     font-style: normal;
 }
-/* @use postcss-color-function;
-@use postcss-nested; */
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900');
-
-/* Base styling */
-
-body {
-    width: 430px;
-    margin: 0 auto;
-    background-color:white;
-    font-family: 'Raleway', sans-serif;
-}
-
-/* .title {
-    position: absolute;
-    width: 330px;
-    height: 28px;
-    left: 200px;
-    top: 110px;
-    font-size: 30px;
-    font-family: 'Recipekorea';
-    line-height: 28px;
-} */
 
 /* .start_btn {
     position: absolute;
@@ -38,7 +16,6 @@ body {
     border: solid 4px #6a60a9;
     border-radius: 255px 15px 225px 15px/15px 225px 15px;
 }
-
 .start_btn > input {
     border: none;
     text-align: center;
@@ -48,23 +25,24 @@ body {
 } */
 
 .search__container {
-    padding-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
 .search__title {
     font-size: 30px;
     font-weight: 900;
     text-align: center;
     font-family: 'Recipekorea';
+    margin-top: 1rem;
     /* color: #ff8b88; */
 }
 .picsong {
     width: 40px;
     height: 40px;
 }
-
 .search__input {
-    width: 100%;
+    width: 40%;
     padding: 12px 24px;
 
     background-color: transparent;
@@ -100,9 +78,7 @@ body {
     background-position: 100% center; 
 }
 
-
-
-.search__btn {
+/* .search__btn {
     position: absolute;
     width: 125px;
     height: 32px;
@@ -121,42 +97,44 @@ body {
     font-family: 'Recipekorea';
     font-size: 17px;
     width: 120px;
+} */
+
+.swiper-container {
+    height: 75vh;
 }
 
-#list {
-    position: absolute;
-    width: 500px;
+.swiper-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.swiper-slide {
+    /* width: 500px;
     height: 550px;
     left: 155px;
-    top: 180px;
+    top: 180px; */
+    /* margin: 20px;
     font-family: 'Recipekorea';
     background-color: #fffcf0;
     line-height: 35px;
     border: solid 6px #dedcee;
     padding: 40px;
     font-size: 25px;
-    border-radius: 255px 15px 225px 15px/15px 225px 15px;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px; */
+    width: 40% !important;
+    background-color: pink;
+    margin-top: 20px;
+    padding-top: 1rem;
+    
 }
 
-#list > h1 {
-    font-size: 30px;
+.music_player {
+    background-color: tomato;
 }
 
-#result {
-    position: absolute;
-    width: 500px;
-    height: 550px;
-    left: 800px;
-    top: 183px;
-    font-family: 'Recipekorea';
-    background-color: #fffcf0;
-    line-height: 35px;
-    border: solid 6px #dedcee;
-    padding: 40px;
-    font-size: 25px;
-    border-radius: 255px 15px 225px 15px/15px 225px 15px;
-}
-
-#result > h1 {
-    font-size: 30px;
+.swiper-slide > a {
+    color: black; 
+    text-decoration: none; 
+    outline: none;
+    display: block;
 }
