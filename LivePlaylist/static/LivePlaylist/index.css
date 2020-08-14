@@ -86,28 +86,28 @@ body {
 /* 푸터 */
 
 #wrapper{
-    display: inline-block;
+    /* display: inline-block;
     margin-top: 100px;
-    width: 100%;
-}
-#wrapper::after{
-    clear: both;
+    width: 100%;*/
+    display: flex;
+    justify-content: space-evenly;
 
-}
+} 
+
 
 .maker{
-    float: left;
-    width: 50%;
-    height: auto;
-    border-color: black solid 2px;
+    /* float: left; */
+    /* width: 50%;
+    height: auto; */
+    margin-top: 20px;
 }
 .maker1{
     font-family: 'Handon3gyeopsal600g';
-    font-size: 20px;
+    font-size: 25px;
 }
 .maker2{
     font-family: 'Handon3gyeopsal300g';
-    font-size: 13px;
+    font-size: 15px;
 }
 
 #menu {
@@ -117,52 +117,53 @@ body {
     background: #d2d2d2;
     text-align: center;
     border-radius: 8px;
-    float: left;
+
 
 }
 #menu div {
     position: relative;
     display: inline-block;
-    font-family: 'Handon3gyeopsal600g';
-    font-family: 40px;
 }
 
 span {
     display: inline-block;
     width: 80px;
-    padding: 16px 16px;
+    padding: 16px 10px;
     cursor: pointer;
+    font-family: 'Handon3gyeopsal600g';
+    font-size: 20px;
+    text-align: center;
+
+
 }
 /* 말풍선박스설정 */
 .arrow_box {
   display: none;
   position: absolute;
   bottom: 60px;
-  width: 150px;
+  width: 300px;
   padding: 8px;
-  left: -30px;
-/* 브라우저 별 접두어
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;   */
+  left: -100px;
   border-radius: 8px;
   background: #ECEBEB;
   color: #333;
-  font-size: 14px;
+  font-size: 20px;
+  opacity: 0.8;
+  font-family: 'Handon3gyeopsal300g';
+
 }
 /* 화살표 꼬리 */
 .arrow_box:after {
   position: absolute;
-  top: 95px;
+  top: 100%;
   left: 50%;
   width: 0;
   height: 0;
   margin-left: -10px;
-  /* border: solid transparent;
-  border-color: rgba(51, 51, 51, 0);
-  border-bottom-color: #ECEBEB; */
+
   border-width: 10px;
 /*     꼬리 방향 바꾸기 */
-  border-top: 10px solid #ECEBEB;
+  border-top: 15px solid #ECEBEB;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-bottom: 0px solid yello;
