@@ -1,4 +1,7 @@
+{% extends 'LivePlaylist/base.html' %}
 {% load static %}
+
+{% block content %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -72,6 +75,10 @@
 		<div class="swiper-pagination"></div>
 	</div>
 
+{% endblock content %}
+
+
 	<script src="{% static 'LivePlaylist/moblie_LivePlaylist.js' %}"></script>
+
 </body>
 </html>
