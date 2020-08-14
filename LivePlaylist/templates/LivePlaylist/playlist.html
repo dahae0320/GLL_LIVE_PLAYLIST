@@ -5,45 +5,80 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>실시간 공유 플레이리스트</title>
-    <link rel="stylesheet" href="{% static 'LivePlaylist/LivePlaylist.css' %}">
+	<link rel="stylesheet" href="{% static 'LivePlaylist/LivePlaylist.css' %}">
+	<link rel="stylesheet" media="(max-width:480px)" href="{% static 'LivePlaylist/moblie_LivePlaylist.css' %}">
+	<script src="{% static 'LivePlaylist/moblie_LivePlaylist.js' %}"></script>
+
+	<!-- touch slider -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </head>
+
 <body>
-	<div id="search__container">
+	<div class="search__container">
 		<p class="search__title">
 			<img class="picsong" src="{% static 'LivePlaylist/song.png' %}">
 			실시간 공유 플레이리스트
 		</p>
 		<input class="search__input" type="text" placeholder="Search">
-
-		<div class="search__btn">
+		<!-- <div class="search__btn">
 			<button href='#'>search</button>
-		</div>
+		</div> -->
 	</div>
 
-	<div id="main">
-		<div id="list">
-			<h1>playlist🎶</h1>
-			<p>22 - taylor swift<br>
-				Never not - lauv<br>
-				This is life - 문성남<br>
-				어떻게 지내(Prod. By VAN.C) - 오반<br>
-				Into the I-LAND - 아이유(IU)<br>
-				Moral of the Story - Ashe<br>
-				Let Go - 방탄소년단<br>
-			</p>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<h3>playlist🎶</h3>
+				<div class="music_player">여기는 음악플레이어 창입니다.</div>
+				<a href="#">22 - taylor swift</a>
+				<a href="#">Never not - lauv</a>
+				<a href="#">This is life - 문성남</a>
+				<a href="#">어떻게 지내(Prod. By VAN.C) - 오반</a>
+				<a href="#">Into the I-LAND - 아이유(IU)</a>
+				<a href="#">Moral of the Story - Ashe</a>
+				<a href="#">Let Go - 방탄소년단</a>
+			</div>
+			<div class="swiper-slide">
+				<h3>검색결과😆</h3>
+				<div class="card mb-3" style="max-width: 540px;">
+					<div class="row no-gutters">
+					  <div class="col-md-4">
+						<img src="..." class="card-img" alt="...">
+					  </div>
+					  <div class="col-md-8">
+						<div class="card-body">
+						  <h5 class="card-title">노래 제목</h5>
+						  <p class="card-text">노래에 대한 설명(description)</p>
+						  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+						</div>
+					  </div>
+					  <button type="button" class="btn btn-dark">Dark</button>
+					</div>
+				</div>
+			</div>
 		</div>
-
-		<div id="result">
-			<h1>검색결과😆</h1>
-			<p>
-				<iframe width="240"  src="https://www.youtube.com/embed/ioNng23DkIM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-				<iframe width="240" src="https://www.youtube.com/embed/5PW3LidySSk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-				<iframe width="240"  src="https://www.youtube.com/embed/xoEX8w5ly-c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</p>
-		</div>
+		<div class="swiper-pagination"></div>
 	</div>
+
 {% endblock content %}
+
+
+	<script src="{% static 'LivePlaylist/moblie_LivePlaylist.js' %}"></script>
 
 </body>
 </html>
