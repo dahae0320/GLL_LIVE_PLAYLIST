@@ -20,3 +20,6 @@
     padding: 3px;
     width: 100% !important;
 }
+#menu,.maker{
+    display: none;
+}
