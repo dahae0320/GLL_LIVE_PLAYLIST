@@ -30,13 +30,13 @@
 
 <body>
 	<div class="search__container">
+		<p class="search__title">
+			<img class="picsong" src="{% static 'LivePlaylist/song.png' %}">
+			실시간 공유 플레이리스트
+		</p>
 		<form method="POST">
 			{% csrf_token %}
-			<p class="search__title">
-				<img class="picsong" src="{% static 'LivePlaylist/song.png' %}">
-				실시간 공유 플레이리스트
-			</p>
-			<input class="search__input" type="text" placeholder="Search">
+			<input type="text" name="search" class="search__input" placeholder="Search">
 			<!-- <button href='#' type="submit">search</button> -->
 		</form>
 	</div>
