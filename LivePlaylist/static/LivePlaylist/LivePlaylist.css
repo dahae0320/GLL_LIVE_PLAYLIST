@@ -158,12 +158,9 @@
 a:visited{
     color: black;
 }
-<<<<<<< HEAD
 
 
-=======
 a:link,a:hover,a{
     text-decoration: none !important;
     color: black !important;
 }
->>>>>>> master
