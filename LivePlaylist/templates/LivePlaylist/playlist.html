@@ -31,9 +31,10 @@
 <body>
 	<div class="search__container">
 		<p class="search__title">
-			<a href="{% url 'index' %}">
 			<img class="picsong" src="{% static 'LivePlaylist/song.png' %}">
+			<a href="{% url 'index' %}">
 			실시간 공유 플레이리스트
+			</a>
 		</p>
 		<form method="POST">
 			{% csrf_token %}
