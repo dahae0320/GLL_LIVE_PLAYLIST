@@ -1,4 +1,7 @@
+{% extends 'LivePlaylist/base.html' %}
 {% load static %}
+
+{% block content %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,20 +30,28 @@
         </style>
     </head>
     <body>
-        <!-- 나는 개똥벌레 웃을 수 엄네~ 저기 개똥 무더기 나의 집인걸 -->
         <div id="header">
             <img class="picsong" src="{% static 'LivePlaylist/song.png' %}">
             실시간 공유 플레이리스트
         </div>
         <a class="button" href="{% url 'playlist' %}">make new !</a>
-        <footer class="footer">
-        <hr  size="5" >
+
+{% endblock content %}
+
+    <!-- <footer>
+        <div id="wrapper">
+            <div class="maker">
+                <p class="maker1"> 사이트 만든 사람 </p>
+                <p class="maker2"> 이다혜 김가은 조승한 김세령</p>
+                <P class="maker2"> 2020 GNU 멋쟁이 사자처럼 8기</P>
+            </div>
             <div id="menu">
-                <div> <span>사용법</span>
+                <div> <span> 사용법</span>
                     <p class="arrow_box">1.make new버튼을 클릭한다 <br>2.링크를 칭구들에게 공유한다  </p>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>  -->
     </body>
     
 </html>
