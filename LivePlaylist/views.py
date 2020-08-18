@@ -18,7 +18,7 @@ def playlist(request):
 
         search_params = {
             'part' : 'snippet',
-            'q' : 'black pink',
+            'q' : request.POST.get('search', False),
             'key' : settings.YOUTUBE_DATA_API_KEY,
             'maxResults' : 9,
             'type' : 'video'
