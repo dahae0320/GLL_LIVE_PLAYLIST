@@ -30,9 +30,11 @@
     flex: 1;
 }
 .col-md-6{
-    flex: 2;
+    flex: 3;
 }
 .col-md-2{
     flex: 1;
+    padding-top: 60px;
+    right: -15px;
 }
 
