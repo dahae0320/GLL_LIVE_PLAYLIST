@@ -31,6 +31,7 @@
 <body>
 	<div class="search__container">
 		<p class="search__title">
+			<a href="{% url 'index' %}">
 			<img class="picsong" src="{% static 'LivePlaylist/song.png' %}">
 			실시간 공유 플레이리스트
 		</p>
@@ -62,7 +63,7 @@
 					  <div class="col-md-4">
 						<img src="{{ video.thumbnail }}" class="card-img" alt="썸네일">
 					  </div>
-					  <div class="col-md-8">
+					  <div class="col-md-6">
 						<div class="card-body">
 						  <h5 class="card-title">{{ video.title }}</h5>
 						  <p class="card-text">노래에 대한 설명(description)</p>
@@ -70,7 +71,9 @@
 						  <p class="card-text"><small class="text-muted">{{ video.duration }}</small></p>
 						</div>
 					  </div>
-					  <button type="button" class="btn btn-dark">Dark</button>
+					  <div class="col-md-2">
+						<button type="button" class="dark">Dark</button>
+					  </div>
 					</div>
 				</div>
 				{% endfor %}
