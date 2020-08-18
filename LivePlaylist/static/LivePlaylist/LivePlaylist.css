@@ -121,20 +121,33 @@
     padding: 40px;
     font-size: 25px;
     border-radius: 255px 15px 225px 15px/15px 225px 15px; */
-    width: 40% !important;
+    width: 35% !important;
     background-color: pink;
     margin-top: 20px;
     padding-top: 1rem;
+    border-width: 3px 4px 3px 5px;
+    margin:25px;
+    width:250px;
+    height:250px;
+    border-image: url('line.png');
     
 }
 
 .music_player {
-    background-color: tomato;
+    background-color: #fffcf0;
+    font-family: 'Recipekorea';
 }
 
 .swiper-slide > a {
-    color: black; 
-    text-decoration: none; 
+    color: #6a60a9; 
+    text-align: center; 
     outline: none;
-    display: block;
+    display: flex;
+    margin:10px;
+   
+    background:#dedcee;
+    border-bottom: 1px solid;
+    border-color:#fffcf0;
+    border-width: 3px 4px 3px 2px;
+    border-radius:80% 4% 92% 2%/4% 80% 4% 95% 
 }
