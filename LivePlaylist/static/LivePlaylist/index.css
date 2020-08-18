@@ -191,7 +191,7 @@ span:hover + p.arrow_box {
         margin-right: 20%;
     }
     body{
-        padding-left: 20%;
+        padding-left: 18%;
         padding-right: 20%;
         padding-bottom: 0px;
         height: 700px;
@@ -219,18 +219,23 @@ span:hover + p.arrow_box {
         margin-top: 100px;
         font-family: 'NeoDunggeunmo';
     }
-    .footer{
-        margin-top: 100px;
-        padding-bottom: 0px;
+    footer{
     }
- 
+    .class{
+    }
     #menu {
         width: 200px;
         margin: 40px auto;
-        
         background: #f3f3f3;
         border: 1px solid #d8d8d8;
         text-align: center;
+    }
+    #wrapper{
+        width: 450px;
+    }
+    .maker{
+        margin-left: -60px;
+        margin-right: 5vw;
     }
 }
 

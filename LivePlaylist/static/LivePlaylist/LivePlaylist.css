@@ -42,7 +42,7 @@
     height: 40px;
 }
 .search__input {
-    width: 40%;
+    width: 100%;
     padding: 12px 24px;
 
     background-color: transparent;
@@ -131,6 +131,7 @@
     height:250px;
     border-image: url('line.png');
     
+    overflow: auto;
 }
 
 .music_player {
@@ -150,4 +151,14 @@
     border-color:#fffcf0;
     border-width: 3px 4px 3px 2px;
     border-radius:80% 4% 92% 2%/4% 80% 4% 95% 
+}
+.col-md-2{
+    padding-top: 10%;
+}
+a:visited{
+    color: black;
+}
+a:link,a:hover,a{
+    text-decoration: none !important;
+    color: black !important;
 }
