@@ -34,11 +34,12 @@
 			<a href="{% url 'index' %}">
 			<img class="picsong" src="{% static 'LivePlaylist/song.png' %}">
 			실시간 공유 플레이리스트
-		</p></a>
-		<input class="search__input" type="text" placeholder="Search">
-		<!-- <div class="search__btn">
-			<button href='#'>search</button>
-		</div> -->
+		</p>
+		<form method="POST">
+			{% csrf_token %}
+			<input type="text" name="search" class="search__input" placeholder="Search">
+			<button type="submit">search</button>
+		</form>
 	</div>
 
 	<div class="swiper-container">
@@ -56,16 +57,18 @@
 			</div>
 			<div class="swiper-slide">
 				<h3>검색결과😆</h3>
-				<div class="card mb-3" id="searchlist" style="max-width: 540px;">
+				{% for video in videos %}
+				<div class="card mb-3" style="max-width: 540px;">
 					<div class="row no-gutters">
 					  <div class="col-md-4">
-						<img src="..." class="card-img" alt="...">
+						<img src="{{ video.thumbnail }}" class="card-img" alt="썸네일">
 					  </div>
 					  <div class="col-md-6">
 						<div class="card-body">
-						    <h5 class="card-title">노래 제목</h5>
-						    <p class="card-text">노래에 대한 설명(description)</p>
-						    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+						  <h5 class="card-title">{{ video.title }}</h5>
+						  <p class="card-text">노래에 대한 설명(description)</p>
+						  <a href="{{ video.url }}" type="button" class="btn btn-dark">view</a>
+						  <p class="card-text"><small class="text-muted">{{ video.duration }}</small></p>
 						</div>
 					  </div>
 					  <div class="col-md-2">
@@ -73,6 +76,7 @@
 					  </div>
 					</div>
 				</div>
+				{% endfor %}
 			</div>
 		</div>
 		<div class="swiper-pagination"></div>
