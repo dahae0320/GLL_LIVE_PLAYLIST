@@ -31,9 +31,10 @@
 <body>
 	<div class="search__container">
 		<p class="search__title">
+			<a href="{% url 'index' %}">
 			<img class="picsong" src="{% static 'LivePlaylist/song.png' %}">
 			실시간 공유 플레이리스트
-		</p>
+		</p></a>
 		<input class="search__input" type="text" placeholder="Search">
 		<!-- <div class="search__btn">
 			<button href='#'>search</button>
@@ -62,11 +63,9 @@
 					  </div>
 					  <div class="col-md-6">
 						<div class="card-body">
-						  <div class=searchlist_box>
 						    <h5 class="card-title">노래 제목</h5>
 						    <p class="card-text">노래에 대한 설명(description)</p>
 						    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-						  </div> 
 						</div>
 					  </div>
 					  <div class="col-md-2">
