@@ -3,7 +3,7 @@
 }
 
 .search__input {
-    width: 80%;
+    width: 100%;
 }
 
 .swiper-container {
@@ -20,3 +20,21 @@
     padding: 3px;
     width: 100% !important;
 }
+#menu,.maker{
+    display: none;
+}
+#searchlist{  
+    display: flex !important;
+}
+.col-md-4{
+    flex: 1;
+}
+.col-md-6{
+    flex: 3;
+}
+.col-md-2{
+    flex: 1;
+    padding-top: 60px;
+    right: -15gpx;
+}
+
