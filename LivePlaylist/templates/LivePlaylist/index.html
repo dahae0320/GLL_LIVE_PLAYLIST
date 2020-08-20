@@ -1,59 +1,16 @@
 {% extends 'LivePlaylist/base.html' %}
 {% load static %}
 
+{% block head %}
+    <link rel="stylesheet" href="{% static 'LivePlaylist/index.css' %}">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+{% endblock head %}
+
+
 {% block content %}
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>실시간 공유 플레이리스트</title>
-        <link rel="stylesheet" href="{% static 'LivePlaylist/index.css' %}">
-        <link rel="stylesheet" href="{% static 'LivePlaylist/base.css' %}">
-
-        <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
-        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous"> -->
-        <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script> -->
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script> -->
-        <!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
-        <!-- <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet"> -->
-        <!-- <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet"> -->
-        <style>
-            /* a태그 초기화 */
-            a {
-                color: #fff;
-                text-decoration: none;
-                outline: none;
-            }
-            a:active,a:hover {
-                text-decoration: none;
-                color: #fff;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="header">
-            <img class="picsong" src="{% static 'LivePlaylist/song.png' %}">
-            실시간 공유 플레이리스트
-        </div>
-        <a class="button" href="{% url 'playlist' %}">make new!</a>
-
+    <div id="header">
+        <img class="picsong" src="{% static 'LivePlaylist/song.png' %}">
+        실시간 공유 플레이리스트
+    </div>
+    <a class="button" href="{% url 'playlist' %}">make new!</a>
 {% endblock content %}
-
-    <!-- <footer>
-        <div id="wrapper">
-            <div class="maker">
-                <p class="maker1"> 사이트 만든 사람 </p>
-                <p class="maker2"> 이다혜 김가은 조승한 김세령</p>
-                <P class="maker2"> 2020 GNU 멋쟁이 사자처럼 8기</P>
-            </div>
-            <div id="menu">
-                <div> <span> 사용법</span>
-                    <p class="arrow_box">1.make new버튼을 클릭한다 <br>2.링크를 칭구들에게 공유한다  </p>
-                </div>
-            </div>
-        </div>
-    </footer>  -->
-    </body>
-    
-</html>

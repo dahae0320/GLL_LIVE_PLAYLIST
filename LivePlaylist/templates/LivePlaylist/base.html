@@ -1,24 +1,59 @@
-{% block content %}
-{% endblock content %}
-<div class="seperate"></div>
-<footer>
-    <div id="wrapper">
-        <div class="maker">
-            <p class="maker1"> 사이트 만든 사람 </p>
-            <p class="maker2"> 이다혜 김가은 조승한 김세령</p>
-            <P class="maker2"> 2020 GNU 멋쟁이 사자처럼 8기</P>
-        </div>
-        <div id="menu">
-            <div> <span> 사용법</span>
-                <p class="arrow_box">
-                    1.make new버튼을 클릭한다 
-                    <br>2.링크를 칭구들에게 공유한다
-                    <br>2.링크를 칭구들에게 공유한다
-                    <br>2.링크를 칭구들에게 공유한다
-                    <br>2.링크를 칭구들에게 공유한다
-                    <br>2.링크를 칭구들에게 공유한다
-                </p>
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>실시간 공유 플레이리스트</title>
+        <link rel="stylesheet" href="{% static 'LivePlaylist/base.css' %}">
+        <style>
+            /* a태그 초기화 */
+            a {
+                color: #fff;
+                text-decoration: none;
+                outline: none;
+            }
+            a:active,a:hover {
+                text-decoration: none;
+                color: #fff;
+            }
+        </style>
+
+        {% block head %}
+
+
+        {% endblock head %}
+    </head>
+
+    <body>
+
+        {% block content %}
+
+
+        {% endblock content %}
+
+        <div class="seperate"></div>
+        <footer>
+            <div id="wrapper">
+                <div class="maker">
+                    <p class="maker1"> 사이트 만든 사람 </p>
+                    <p class="maker2"> 이다혜 김가은 조승한 김세령</p>
+                    <P class="maker2"> 2020 GNU 멋쟁이 사자처럼 8기</P>
+                </div>
+                <div id="menu">
+                    <div> <span> 사용법</span>
+                        <p class="arrow_box">
+                            1.make new버튼을 클릭한다 
+                            <br>2.링크를 칭구들에게 공유한다
+                            <br>2.링크를 칭구들에게 공유한다
+                            <br>2.링크를 칭구들에게 공유한다
+                            <br>2.링크를 칭구들에게 공유한다
+                            <br>2.링크를 칭구들에게 공유한다
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</footer> 
+        </footer>
+
+    </body>
+</html>
