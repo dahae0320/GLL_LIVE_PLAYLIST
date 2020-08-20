@@ -27,7 +27,7 @@
     display: flex !important;
 }
 .col-md-4{
-    flex: 1;
+    flex: 2;
 }
 .col-md-6{
     flex: 3;
@@ -35,6 +35,22 @@
 .col-md-2{
     flex: 1;
     padding-top: 60px;
-    right: -15gpx;
+    right: -20gpx;
 }
-
+.card-title{
+    display: inline-block;
+    font-size: 15px;
+    width: 50vw;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    line-height: 1.2;
+    height: 3.6em;
+    text-align: left;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}
+.card-img{
+    padding-top: 35px;
+}
