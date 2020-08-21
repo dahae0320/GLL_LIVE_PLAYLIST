@@ -31,9 +31,10 @@
 <body>
 	<div class="search__container">
 		<p class="search__title">
-			<a href="{% url 'index' %}">
 			<img class="picsong" src="{% static 'LivePlaylist/song.png' %}">
+			<a href="{% url 'index' %}">
 			실시간 공유 플레이리스트
+			</a>
 		</p>
 		<form method="POST">
 			{% csrf_token %}
@@ -58,7 +59,7 @@
 			<div class="swiper-slide">
 				<h3>검색결과😆</h3>
 				{% for video in videos %}
-				<div class="card mb-3" style="max-width: 540px;">
+				<div class="card mb-3" id="searchlist" style="max-width: 540px;">
 					<div class="row no-gutters">
 					  <div class="col-md-4">
 						<img src="{{ video.thumbnail }}" class="card-img" alt="썸네일">
@@ -66,13 +67,14 @@
 					  <div class="col-md-6">
 						<div class="card-body">
 						  <h5 class="card-title">{{ video.title }}</h5>
-						  <p class="card-text">노래에 대한 설명(description)</p>
+						  <!-- <p class="card-text">노래에 대한 설명(description)</p> -->
 						  <a href="{{ video.url }}" type="button" class="btn btn-dark">view</a>
 						  <p class="card-text"><small class="text-muted">{{ video.duration }}</small></p>
 						</div>
 					  </div>
 					  <div class="col-md-2">
 						<button type="button" class="dark">Dark</button>
+						<!-- 잉 -->
 					  </div>
 					</div>
 				</div>
