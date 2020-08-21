@@ -11,6 +11,7 @@ mql.addListener(function(e) {
             pagination: {
                 el: '.swiper-pagination'
             }
+
         });
     } else {
         console.log('데스크탑 화면 입니다.');

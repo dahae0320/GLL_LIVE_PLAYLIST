@@ -126,7 +126,7 @@
     margin-top: 20px;
     padding-top: 1rem;
     border-width: 3px 4px 3px 5px;
-    margin:25px;
+    /* margin:25px; */
     width:250px;
     height:250px;
     border-image: url('line.png');

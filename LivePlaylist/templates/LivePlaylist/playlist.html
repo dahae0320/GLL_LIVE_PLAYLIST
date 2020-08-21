@@ -1,16 +1,9 @@
 {% extends 'LivePlaylist/base.html' %}
 {% load static %}
 
-{% block content %}
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>실시간 공유 플레이리스트</title>
+{% block head %}
 	<link rel="stylesheet" href="{% static 'LivePlaylist/LivePlaylist.css' %}">
 	<link rel="stylesheet" media="(max-width:480px)" href="{% static 'LivePlaylist/moblie_LivePlaylist.css' %}">
-	<script src="{% static 'LivePlaylist/moblie_LivePlaylist.js' %}"></script>
 
 	<!-- touch slider -->
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
@@ -26,9 +19,10 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-</head>
+{% endblock head %}
 
-<body>
+
+{% block content %}
 	<div class="search__container">
 		<p class="search__title">
 			<img class="picsong" src="{% static 'LivePlaylist/song.png' %}">
@@ -39,7 +33,7 @@
 		<form method="POST">
 			{% csrf_token %}
 			<input type="text" name="search" class="search__input" placeholder="Search">
-			<button type="submit">search</button>
+			<!-- <button type="submit">search</button> -->
 		</form>
 	</div>
 
@@ -47,7 +41,9 @@
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
 				<h3>playlist🎶</h3>
-				<div class="music_player">여기는 음악플레이어 창입니다.</div>
+				<div class="music_player">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/xGevsZco2EM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
+				</div>
 				<a href="#">22 - taylor swift</a>
 				<a href="#">Never not - lauv</a>
 				<a href="#">This is life - 문성남</a>
@@ -55,6 +51,7 @@
 				<a href="#">Into the I-LAND - 아이유(IU)</a>
 				<a href="#">Moral of the Story - Ashe</a>
 				<a href="#">Let Go - 방탄소년단</a>
+				<p>{{ videos.id }}</p>
 			</div>
 			<div class="swiper-slide">
 				<h3>검색결과😆</h3>
@@ -62,7 +59,7 @@
 				<div class="card mb-3" id="searchlist" style="max-width: 540px;">
 					<div class="row no-gutters">
 					  <div class="col-md-4">
-						<img src="{{ video.thumbnail }}" class="card-img" alt="썸네일">
+						<img src="{{ video.thumbnail }}" class="card-img" alt="{{ video.title }}">
 					  </div>
 					  <div class="col-md-6">
 						<div class="card-body">
@@ -73,8 +70,8 @@
 						</div>
 					  </div>
 					  <div class="col-md-2">
-						<button type="button" class="dark">Dark</button>
-						<!-- 잉 -->
+						<button type="button" class="dark">Add</button>
+
 					  </div>
 					</div>
 				</div>
@@ -84,10 +81,5 @@
 		<div class="swiper-pagination"></div>
 	</div>
 
+<script src="{% static 'LivePlaylist/moblie_LivePlaylist.js' %}"></script>
 {% endblock content %}
-
-
-	<script src="{% static 'LivePlaylist/moblie_LivePlaylist.js' %}"></script>
-
-</body>
-</html>
