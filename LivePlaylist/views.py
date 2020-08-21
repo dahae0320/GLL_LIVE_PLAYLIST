@@ -27,39 +27,41 @@ def playlist(request):
         video_ids = []
         r = requests.get(search_url, params=search_params)
         
-        results = r.json()['items']
+        print(r.text)
 
-        for result in results:
-            video_ids.append(result['id']['videoId'])
+    #     results = r.json()['items']
 
-        video_params = {
-            'key' : settings.YOUTUBE_DATA_API_KEY,
-            'part' : 'snippet,contentDetails',
-            'id' : ','.join(video_ids),
-            'maxResults' : 9,
-        }
+    #     for result in results:
+    #         video_ids.append(result['id']['videoId'])
 
-        r = requests.get(video_url, params=video_params)
+    #     video_params = {
+    #         'key' : settings.YOUTUBE_DATA_API_KEY,
+    #         'part' : 'snippet,contentDetails',
+    #         'id' : ','.join(video_ids),
+    #         'maxResults' : 9,
+    #     }
 
-        results = r.json()['items']
+    #     r = requests.get(video_url, params=video_params)
 
-        for result in results:
-            # print(result['snippet']['title'])
-            # print(result['id'])
-            # print(parse_duration(result['contentDetails']['duration']))
-            # print(result['snippet']['thumbnails']['high']['url'])
-            video_data = {
-                'title' : result['snippet']['title'],
-                'id' : result['id'],
-                'url' : f'https://www.youtube.com/watch?v={ result["id"] }',
-                'duration' : parse_duration(result['contentDetails']['duration']),
-                'thumbnail' : result['snippet']['thumbnails']['high']['url']
-            }
+    #     results = r.json()['items']
 
-            videos.append(video_data)
+    #     for result in results:
+    #         # print(result['snippet']['title'])
+    #         # print(result['id'])
+    #         # print(parse_duration(result['contentDetails']['duration']))
+    #         # print(result['snippet']['thumbnails']['high']['url'])
+    #         video_data = {
+    #             'title' : result['snippet']['title'],
+    #             'id' : result['id'],
+    #             'url' : f'https://www.youtube.com/watch?v={ result["id"] }',
+    #             'duration' : parse_duration(result['contentDetails']['duration']),
+    #             'thumbnail' : result['snippet']['thumbnails']['high']['url']
+    #         }
 
-    context = {
-        'videos' : videos
-    }
+    #         videos.append(video_data)
 
-    return render(request, 'LivePlaylist/playlist.html', context)
+    # context = {
+    #     'videos' : videos
+    # }
+    
+    return render(request, 'LivePlaylist/playlist.html')
