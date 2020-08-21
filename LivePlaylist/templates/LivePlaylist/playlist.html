@@ -29,12 +29,18 @@
 			<a href="{% url 'index' %}">
 			실시간 공유 플레이리스트
 			</a>
-		</p>
-		<form method="POST">
-			{% csrf_token %}
-			<input type="text" name="search" class="search__input" placeholder="Search">
-			<!-- <button type="submit">search</button> -->
-		</form>
+		</p> 
+		<div class="wrapper1">
+			<div class="search1">
+				<form method="POST">	
+					{% csrf_token %}
+					<input type="text" name="search" class="search__input" placeholder="Search">
+				</form>
+			</div>
+			<div class="search2">
+				<a href="#"><img src="{% static 'LivePlaylist/search.png' %}" width='24' height='24' /></a>
+			</div>
+		</div>
 	</div>
 
 	<div class="swiper-container">
