@@ -63,7 +63,7 @@ span {
   font-size: 20px;
   opacity: 0.8;
   font-family: 'Handon3gyeopsal300g';
-
+  z-index: 1;
 }
 /* 화살표 꼬리 */
 .arrow_box:after {

@@ -28,6 +28,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 5px;
 }
 .search__title {
     font-size: 30px;
@@ -35,6 +36,7 @@
     text-align: center;
     font-family: 'Recipekorea';
     margin-top: 1rem;
+    margin-bottom: 5px;
     /* color: #ff8b88; */
 }
 .picsong {
@@ -106,6 +108,7 @@
 .swiper-wrapper {
     display: flex;
     justify-content: space-evenly;
+   
 }
 
 .swiper-slide {
@@ -123,20 +126,16 @@
     border-radius: 255px 15px 225px 15px/15px 225px 15px; */
     width: 35% !important;
     background-color: none;
-    margin-top: 20px;
-    padding-top: 1rem;
-    border-width: 3px 4px 3px 5px;
-    /* margin:25px; */
-    width:250px;
-    height:250px;
+    margin-top: 0px;
+    height:300px;
     border-style: solid;
     border-width: 10px 0px 10px 0px;
     -moz-border-image: url(line.png) 18 0 18 0 round stretch;
     -webkit-border-image: url(line.png) 18 0 18 0 round stretch;
     -o-border-image: url(line.png) 18 0 18 0 round stretch;
     border-image: url(line.png) 18 0 18 0 round stretch;
-}
     overflow: auto;
+   
 }
 
 .music_player {
