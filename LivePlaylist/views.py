@@ -10,15 +10,18 @@ def index(request):
     return render(request, 'LivePlaylist/index.html')
 
 def playlist(request):
+    return render(request, 'LivePlaylist/playlist.html')
+
+def search_result(request):
     videos = []
 
-    if request.method == 'POST':
+    if request.is_ajax:
         search_url = 'https://www.googleapis.com/youtube/v3/search'
         video_url = 'https://www.googleapis.com/youtube/v3/videos'
 
         search_params = {
             'part' : 'snippet',
-            'q' : request.POST.get('search', False),
+            'q' : request.GET.get('search', False),
             'key' : settings.YOUTUBE_DATA_API_KEY,
             'maxResults' : 9,
             'type' : 'video'
@@ -62,4 +65,4 @@ def playlist(request):
         'videos' : videos
     }
     
-    return render(request, 'LivePlaylist/playlist.html', context)
+    return render(request, 'LivePlaylist/search_result.html', context)

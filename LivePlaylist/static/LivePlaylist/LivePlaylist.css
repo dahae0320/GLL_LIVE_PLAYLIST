@@ -41,7 +41,7 @@
     width: 40px;
     height: 40px;
 }
-.search__input {
+#search__input {
     width: 100%;
     padding: 12px 24px;
 
@@ -64,12 +64,12 @@
     backface-visibility: hidden;
     transform-style: preserve-3d;
 }
-.search__input::placeholder {
+#search__input::placeholder {
     color: color(#575756 a(0.8));
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
-.search__input:hover, .search__input:focus {
+#search__input:hover, #search__input:focus {
     padding: 12px 0;
     outline: 0;
     border: 1px solid transparent;
