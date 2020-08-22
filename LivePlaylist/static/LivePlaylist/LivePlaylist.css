@@ -135,7 +135,7 @@
     -webkit-border-image: url(line.png) 18 0 18 0 round stretch;
     -o-border-image: url(line.png) 18 0 18 0 round stretch;
     border-image: url(line.png) 18 0 18 0 round stretch;
-}
+
     overflow: auto;
 }
 
