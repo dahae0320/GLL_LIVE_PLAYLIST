@@ -59,11 +59,8 @@ body {
     -webkit-transition: all ease-in-out 300ms;
     transition: all ease-in-out 300ms;
     text-align: center;
-    /*  position: relative;
-  left: 42%;*/
     margin-left: 40%;
     margin-right: 40%;
-    /*margin-bottom: 10%;*/
     font-family: 'NeoDunggeunmo'; 
     font-size: 30px;
 
@@ -86,9 +83,7 @@ body {
 /* 푸터 */
 
 #wrapper{
-    /* display: inline-block;
-    margin-top: 100px;
-    width: 100%;*/
+
     display: flex;
     justify-content: space-evenly;
 
@@ -96,9 +91,6 @@ body {
 
 
 .maker{
-    /* float: left; */
-    /* width: 50%;
-    height: auto; */
     margin-top: 20px;
 }
 .maker1{
@@ -160,7 +152,6 @@ span {
   width: 0;
   height: 0;
   margin-left: -10px;
-
   border-width: 10px;
 /*     꼬리 방향 바꾸기 */
   border-top: 15px solid #ECEBEB;
