@@ -14,6 +14,7 @@ def playlist(request):
 
 def search_result(request):
     videos = []
+    
 
     if request.is_ajax:
         search_url = 'https://www.googleapis.com/youtube/v3/search'
@@ -21,7 +22,7 @@ def search_result(request):
 
         search_params = {
             'part' : 'snippet',
-            'q' : request.GET.get('search', False),
+            'q' : request.GET['q'],
             'key' : settings.YOUTUBE_DATA_API_KEY,
             'maxResults' : 9,
             'type' : 'video'

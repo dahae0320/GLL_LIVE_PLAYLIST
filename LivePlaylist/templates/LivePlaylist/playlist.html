@@ -62,7 +62,7 @@
 <script src="{% static 'LivePlaylist/moblie_LivePlaylist.js' %}"></script>
 <script>
 	$('#btn_search').click(function(){
-	   $('#road_search').load('/search_result?q='+$('#search__input').val())
+	   $('#road_search').load('/search_result?q='+encodeURI($('#search__input').val()))
 	});
 </script>
 {% endblock content %}
