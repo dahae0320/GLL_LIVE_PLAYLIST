@@ -33,7 +33,7 @@
     margin-left: 10px;
 }
 
-.search__input {
+#search__input {
     width: 100%;
     padding: 12px 24px;
 
@@ -44,6 +44,7 @@
         
     color: #575756;
     background-color: transparent;
+    
     border-radius: 50px;
     border: 1px solid #575756;
     transition: all 250ms ease-in-out;

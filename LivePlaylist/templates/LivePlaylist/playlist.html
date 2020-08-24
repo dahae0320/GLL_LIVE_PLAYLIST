@@ -29,14 +29,13 @@
 			<a href="{% url 'index' %}">
 			실시간 공유 플레이리스트
 			</a>
-		</p> 
+		</p>
 		<div class="wrapper1">
 			<div class="search1">
-				<input type="text" name="search" class="search__input" placeholder="Search">
+				<input type="text" name="search" id="search__input" placeholder="Search">
 			</div>
 			<div class="search2">
-				<button id="btn_search" type="submit"><img src="{% static 'LivePlaylist/search.png' %}" width='24' height='24' /></button>
-   <!-- <button id="btn_search" type="submit">search</button> -->
+				<a id="btn_search" type="submit"><img src="{% static 'LivePlaylist/search.png' %}" width='24' height='24' /></a>
 			</div>
 		</div>
 	</div>
