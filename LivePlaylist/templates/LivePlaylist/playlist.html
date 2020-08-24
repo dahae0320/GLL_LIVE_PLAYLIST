@@ -62,7 +62,11 @@
 <script src="{% static 'LivePlaylist/moblie_LivePlaylist.js' %}"></script>
 <script>
 	$('#btn_search').click(function(){
-	   $('#road_search').load('/search_result?q='+encodeURI($('#search__input').val()))
+		if($('#search__input').val() == ''){
+			alert('검색어를 입력해주세요.')
+		}else{
+	   		$('#road_search').load('/search_result?q='+encodeURI($('#search__input').val()))
+		}
 	});
 </script>
 {% endblock content %}
