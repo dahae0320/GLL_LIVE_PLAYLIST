@@ -29,11 +29,16 @@
 			<a href="{% url 'index' %}">
 			실시간 공유 플레이리스트
 			</a>
-		</p>
-		
-			<input type="text" name="search" id="search__input" placeholder="Search">
-			<button id="btn_search" type="submit">search</button>
-		
+		</p> 
+		<div class="wrapper1">
+			<div class="search1">
+				<input type="text" name="search" class="search__input" placeholder="Search">
+			</div>
+			<div class="search2">
+				<button id="btn_search" type="submit"><img src="{% static 'LivePlaylist/search.png' %}" width='24' height='24' /></button>
+   <!-- <button id="btn_search" type="submit">search</button> -->
+			</div>
+		</div>
 	</div>
 
 	<div class="swiper-container">
@@ -41,7 +46,7 @@
 			<div class="swiper-slide">
 				<h3>playlist🎶</h3>
 				<div class="music_player">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/IRNBtocmQ58" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>				
+					<iframe width="224" height="126" src="https://www.youtube.com/embed/xGevsZco2EM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
 				</div>
 				<a href="#">22 - taylor swift</a>
 				<a href="#">Never not - lauv</a>

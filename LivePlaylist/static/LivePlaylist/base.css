@@ -1,16 +1,23 @@
+@font-face {
+  font-family: 'Handon3gyeopsal300g';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Handon3gyeopsal300g.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+         
+@font-face {
+  font-family: 'Handon3gyeopsal600g';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Handon3gyeopsal600g.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 #wrapper{
-    /* display: inline-block;
-    margin-top: 100px;
-    width: 100%;*/
     display: flex;
     justify-content: space-evenly;
 
 } 
 
 .maker{
-    /* float: left; */
-    /* width: 50%;
-    height: auto; */
     margin-top: 20px;
 }
 .maker1{
@@ -62,7 +69,7 @@ span {
   font-size: 20px;
   opacity: 0.8;
   font-family: 'Handon3gyeopsal300g';
-
+  z-index: 1;
 }
 /* 화살표 꼬리 */
 .arrow_box:after {
@@ -72,7 +79,6 @@ span {
   width: 0;
   height: 0;
   margin-left: -10px;
-
   border-width: 10px;
 /*     꼬리 방향 바꾸기 */
   border-top: 15px solid #ECEBEB;
