@@ -19,10 +19,6 @@ def search_result(request):
         search_url = 'https://www.googleapis.com/youtube/v3/search'
         video_url = 'https://www.googleapis.com/youtube/v3/videos'
 
-        # 검색어가 없을 경우
-        # if request.GET['q'] == '':
-            
-
         search_params = {
             'part' : 'snippet',
             'q' : request.GET['q'],
