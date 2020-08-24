@@ -168,8 +168,6 @@ span:hover + p.arrow_box {
 
 
 
-
-
 /* 모바일 환경 */
 @media(max-width:800px){
     #header {
@@ -179,14 +177,25 @@ span:hover + p.arrow_box {
         padding: 0px;
         margin-bottom: auto;
         width: 300px;
-        margin-left: 10%;
-        margin-right: 20%;
+        margin:auto;
+    }
+    html{
+        height: 100vh;
+        width: 100vw;
     }
     body{
-        padding-left: 18%;
+        /* padding-left: 18%;
         padding-right: 20%;
         padding-bottom: 0px;
-        height: 700px;
+        height: 700px; */
+        width: 100vw;
+        min-height: 100vh !important;  
+        padding: 0;
+        padding-top: 20%;
+        overflow:hidden !important;
+        touch-action: none;
+        position: fixed !important;
+        overflow-y: scroll;
     }
     .picsong {
         width: 50px;
@@ -204,29 +213,49 @@ span:hover + p.arrow_box {
         -webkit-transition: all ease-in-out 300ms;
         transition: all ease-in-out 300ms;
         text-align: center;
-        /*  position: relative;
-      left: 42%;*/
-        margin-left: 30%;
-        margin-right: 40%;
+        margin: auto;
         margin-top: 100px;
         font-family: 'NeoDunggeunmo';
-    }
-    footer{
-    }
-    .class{
+
+        width: 200px;
+        height: 110px;
     }
     #menu {
-        width: 200px;
+        width: 100px;
         margin: 40px auto;
         background: #f3f3f3;
         border: 1px solid #d8d8d8;
         text-align: center;
     }
+    span{
+        font-size: 15px;
+    }
     #wrapper{
-        width: 450px;
+        width: 100vw;
     }
     .maker{
-        margin-left: -60px;
-        margin-right: 5vw;
+        margin:auto;
     }
+    .maker1{
+        font-size: 20px;
+    }
+    .maker2{
+        font-size: 13px;
+    }
+    .arrow_box {
+        display: none;
+        position: absolute;
+        bottom: 70px;
+        width: 100px;
+        height: 60px;
+        padding: 8px;
+        left: -10px;
+        border-radius: 8px;
+        background: #ECEBEB;
+        color: #333;
+        font-size: 20px;
+        opacity: 0.8;
+        font-family: 'Handon3gyeopsal300g';
+      
+      }
 }
