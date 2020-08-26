@@ -25,6 +25,7 @@
 }
 #searchlist{  
     display: flex !important;
+    height: 18vh;
 }
 .col-md-4{
     flex: 2;
@@ -52,6 +53,7 @@
     -webkit-box-orient: vertical;
 }
 .card-img{
-    padding-top: 35px;
+    padding:auto 0;
+    padding-top: 3vh;
 }
 /* 또 울어라 젊은 인생아.. */
