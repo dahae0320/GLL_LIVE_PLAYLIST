@@ -65,5 +65,16 @@ def search_result(request):
     context = {
         'videos' : videos
     }
-    
+    # print(videos[0].get('id'))
     return render(request, 'LivePlaylist/search_result.html', context)
+
+def road_playlist(request):
+    if request.is_ajax and request.method == 'POST':
+        video_data = {
+            'video_id' : request.POST['video_id'],
+            'video_title' : request.POST['video_title']
+        }
+
+        return render(request,'LivePlaylist/road_playlist.html',)
+
+    return render(request, 'LivePlaylist/road_playlist.html')

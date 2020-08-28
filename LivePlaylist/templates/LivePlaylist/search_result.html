@@ -15,8 +15,27 @@
                 </div>
             </div>
             <div class="col-md-2">
-                <button type="button" class="dark">Add</button>
+                <button type="button" id="add_btn" name="{{ video.id }}" value="{{ video.title }}" onclick="addPlaylist(this)">Add</button>
             </div>
         </div>
-    </div>
+    </div>  
 {% endfor %}
+<script>
+    function addPlaylist(self) {
+        var video_id = $(self).attr('name')
+        var video_title = $(self).attr('value')
+        $.ajax({
+            method: "POST",
+            url: "{% url 'road_playlist' %}",
+            data: {'video_id': video_id, 'video_title':video_title, csrfmiddlewaretoken: '{{ csrf_token }}'},
+            success: function (data) {
+                //this gets called when server returns an OK response
+                alert("it worked! + "+ video_title);
+                
+           },
+           error: function (data) {
+                alert("it didnt work");
+           }
+        });
+    };
+</script>
