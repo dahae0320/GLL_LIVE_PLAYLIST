@@ -166,7 +166,14 @@ span:hover + p.arrow_box {
   display: block;
 }
 
+a:visited{
+    color: white;
+}
 
+a:link,a:hover,a{
+    text-decoration: none !important;
+    color: white !important;
+}
 
 /* 모바일 환경 */
 @media(max-width:800px){
