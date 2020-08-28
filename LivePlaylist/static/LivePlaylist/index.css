@@ -176,7 +176,8 @@ span:hover + p.arrow_box {
         font-size: 45px;
         padding: 0px;
         margin-bottom: auto;
-        width: 300px;
+        margin-top:5vh !important;
+        width: 270px;
         margin:auto;
     }
     html{
@@ -191,15 +192,15 @@ span:hover + p.arrow_box {
         width: 100vw;
         min-height: 100vh !important;  
         padding: 0;
-        padding-top: 20%;
         overflow:hidden !important;
         touch-action: none;
         position: fixed !important;
         overflow-y: scroll;
     }
     .picsong {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
     }
     .button {
         display: inline-block;
@@ -232,6 +233,7 @@ span:hover + p.arrow_box {
     }
     #wrapper{
         width: 100vw;
+        height: 110px !important;
     }
     .maker{
         margin:auto;
@@ -246,16 +248,19 @@ span:hover + p.arrow_box {
         display: none;
         position: absolute;
         bottom: 70px;
-        width: 100px;
-        height: 60px;
+        width: 150px;
+        height: 100px;
         padding: 8px;
-        left: -10px;
+        left: -40px;
         border-radius: 8px;
         background: #ECEBEB;
         color: #333;
-        font-size: 20px;
+        font-size: 15px;
         opacity: 0.8;
         font-family: 'Handon3gyeopsal300g';
       
+      }
+      .seperate{
+          margin-top:15vh;
       }
 }
