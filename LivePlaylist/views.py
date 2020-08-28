@@ -74,6 +74,6 @@ def road_playlist(request):
             'video_title' : request.POST['video_title']
         }
 
-        return render(request,'LivePlaylist/road_playlist.html', context)
+        return render(request,'LivePlaylist/road_playlist.html',)
 
     return render(request, 'LivePlaylist/road_playlist.html')
