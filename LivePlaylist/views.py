@@ -3,14 +3,21 @@ import requests
 from isodate import parse_duration
 
 from django.conf import settings
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Playlist
 
 # Create your views here.
 def index(request):
     return render(request, 'LivePlaylist/index.html')
 
-def playlist(request):
+def make_playlist(requset):
+    playlist = Playlist()
+    playlist.save()
+    playlist_id = playlist.id
+    # print(playlist.id)
+    return redirect('playlist/'+str(playlist_id))
+
+def playlist(request, playlist_id):
     return render(request, 'LivePlaylist/playlist.html')
 
 def search_result(request):
