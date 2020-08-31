@@ -83,8 +83,8 @@ def load_playlist(request):
         music.save()
         
         video_data = {
-            'video_id' : music.title,
-            'video_title' : music.video_id
+            'video_id' : music.video_id,
+            'video_title' : music.title
         }
 
         return render(request,'LivePlaylist/load_playlist.html', video_data)
