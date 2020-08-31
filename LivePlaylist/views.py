@@ -4,7 +4,7 @@ from isodate import parse_duration
 
 from django.conf import settings
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Playlist
+from .models import Playlist,Music
 
 # Create your views here.
 def index(request):
@@ -75,13 +75,18 @@ def search_result(request):
     # print(videos[0].get('id'))
     return render(request, 'LivePlaylist/search_result.html', context)
 
-def road_playlist(request):
+def load_playlist(request):
     if request.is_ajax and request.method == 'POST':
+        music = Music()
+        music.title = request.POST['video_title']
+        music.video_id = request.POST['video_id']
+        music.save()
+        
         video_data = {
-            'video_id' : request.POST['video_id'],
-            'video_title' : request.POST['video_title']
+            'video_id' : music.title,
+            'video_title' : music.video_id
         }
 
-        return render(request,'LivePlaylist/road_playlist.html', video_data)
+        return render(request,'LivePlaylist/load_playlist.html', video_data)
 
-    return render(request, 'LivePlaylist/road_playlist.html')
+    return render(request, 'LivePlaylist/load_playlist.html')

@@ -26,12 +26,12 @@
         var video_title = $(self).attr('value')
         $.ajax({
             method: "POST",
-            url: "{% url 'road_playlist' %}",
+            url: "{% url 'load_playlist' %}",
             data: {'video_id': video_id, 'video_title':video_title, csrfmiddlewaretoken: '{{ csrf_token }}'},
             success: function (data) {
                 //this gets called when server returns an OK response
-                alert("it worked! + "+ video_title);
-                
+                alert("it worked! + "+ video_title + video_id);
+                // $('#load_playlist').load('/load_playlist')
            },
            error: function (data) {
                 alert("it didnt work");
