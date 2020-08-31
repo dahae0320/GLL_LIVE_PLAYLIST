@@ -80,7 +80,7 @@ def load_playlist(request):
         music = Music()
         music.title = request.POST['video_title']
         music.video_id = request.POST['video_id']
-        music.save()
+        # music.save()
         
         video_data = {
             'video_id' : music.video_id,
