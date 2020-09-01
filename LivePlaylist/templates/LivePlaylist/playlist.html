@@ -47,7 +47,7 @@
 				<div class="music_player">
 					<iframe width="224" height="126" src="https://www.youtube.com/embed/xGevsZco2EM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
 				</div>
-				<div id="road_playlist"></div>
+				<div id="load_playlist"></div>
 			</div>
 			<div class="swiper-slide">
 				<h3>검색 결과</h3>
@@ -63,10 +63,10 @@
 		if($('#search__input').val() == ''){
 			alert('검색어를 입력해주세요.')
 		}else{
-	   		$('#road_search').load('/search_result?q='+encodeURI($('#search__input').val()))
+	   		$('#load_search').load('/search_result?q='+encodeURI($('#search__input').val()))
 		}
 	});
 
-	$('#road_playlist').load('/road_playlist')
+	$('#load_playlist').load('/load_playlist')
 </script>
 {% endblock content %}
