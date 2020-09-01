@@ -35,7 +35,7 @@
 }
 .col-md-2{
     flex: 1;
-    padding-top: 60px;
+    padding-top: 6.5vh;
     right: -20gpx;
 }
 .card-title{
@@ -56,4 +56,4 @@
     padding:auto 0;
     padding-top: 3vh;
 }
-/* 또 울어라 젊은 인생아.. */
+
