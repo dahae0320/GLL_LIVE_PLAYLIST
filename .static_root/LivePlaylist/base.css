@@ -1,0 +1,95 @@
+@font-face {
+  font-family: 'Handon3gyeopsal300g';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Handon3gyeopsal300g.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+         
+@font-face {
+  font-family: 'Handon3gyeopsal600g';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Handon3gyeopsal600g.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+#wrapper{
+    display: flex;
+    justify-content: space-evenly;
+
+} 
+
+.maker{
+    margin-top: 20px;
+}
+.maker1{
+    font-family: 'Handon3gyeopsal600g';
+    font-size: 15px;
+}
+.maker2{
+    font-family: 'Handon3gyeopsal300g';
+    font-size: 10px;
+    text-align: center;
+}
+
+#menu {
+    width: 120px;
+    height: 50px;
+    margin: 40px ;
+    background: #d2d2d2;
+    text-align: center;
+    border-radius: 8px;
+
+
+}
+#menu div {
+    position: relative;
+    display: inline-block;
+}
+
+span {
+    display: inline-block;
+    width: 80px;
+    padding: 16px 10px;
+    cursor: pointer;
+    font-family: 'Handon3gyeopsal600g';
+    font-size: 15px;
+    text-align: center;
+
+
+}
+/* 말풍선박스설정 */
+.arrow_box {
+  display: none;
+  position: absolute;
+  bottom: 60px;
+  width: 300px;
+  padding: 8px;
+  left: -100px;
+  border-radius: 8px;
+  background: #ECEBEB;
+  color: #333;
+  font-size: 15px;
+  opacity: 0.8;
+  font-family: 'Handon3gyeopsal300g';
+  z-index: 1;
+}
+/* 화살표 꼬리 */
+.arrow_box:after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -10px;
+  border-width: 10px;
+/*     꼬리 방향 바꾸기 */
+  border-top: 15px solid #ECEBEB;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 0px solid yello;
+  pointer-events: none;
+  content: " "; 
+}
+
+span:hover + p.arrow_box {
+  display: block;
+}

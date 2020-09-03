@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = '0$pzq$%u(a1u1)n@+*rkz#*r^5((3_b_m)h2*ya68me1z#v#cg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
 
 # Application definition
@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -122,7 +123,9 @@ USE_TZ = False
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-) 
+    os.path.join(BASE_DIR, 'LivePlaylist/static'),
+)
+
+STATIC_ROOT = os.path.join(BASE_DIR, '.static_root')
 
 YOUTUBE_DATA_API_KEY = 'AIzaSyBQL7DD5bBzxrhXyXGjJ2bZz-6aMM0Dj1A'
