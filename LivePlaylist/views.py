@@ -18,7 +18,7 @@ def make_playlist(requset):
     return redirect('playlist/'+str(playlist_id))
 
 def playlist(request, playlist_id):
-    return render(request, 'LivePlaylist/playlist.html')
+    return render(request, 'LivePlaylist/playlist.html', {'playlist_id':playlist_id})
 
 def search_result(request):
     videos = []
@@ -77,16 +77,22 @@ def search_result(request):
 
 def load_playlist(request):
     if request.is_ajax and request.method == 'POST':
+        playlist = Playlist.objects.get(id=request.POST['playlist_id'])
         music = Music()
+        music.playlist = playlist
         music.title = request.POST['video_title']
         music.video_id = request.POST['video_id']
-        # music.save()
+        music.save()
         
-        video_data = {
-            'video_id' : music.video_id,
-            'video_title' : music.title
-        }
+        music_list = Music.objects.filter(playlist=playlist).values('title')
+        print(music_list)
+        # music_cnt = music_list.count()
+        # print(music_cnt)
+        # video_data = []
+        # for i in range(music_cnt):
+        #     video_data.append(music_list[i].key('title'))
+        # print(video_data)
 
-        return render(request,'LivePlaylist/load_playlist.html', video_data)
+        return render(request,'LivePlaylist/load_playlist.html')
 
     return render(request, 'LivePlaylist/load_playlist.html')

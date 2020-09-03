@@ -24,13 +24,14 @@
     function addPlaylist(self) {
         var video_id = $(self).attr('name')
         var video_title = $(self).attr('value')
+        var playlist_id = $('#playlist').attr('name')
         $.ajax({
             method: "POST",
             url: "{% url 'load_playlist' %}",
-            data: {'video_id': video_id, 'video_title':video_title, csrfmiddlewaretoken: '{{ csrf_token }}'},
+            data: {'video_id': video_id, 'video_title':video_title, 'playlist_id':playlist_id, csrfmiddlewaretoken: '{{ csrf_token }}'},
             success: function (data) {
                 //this gets called when server returns an OK response
-                alert("it worked! + "+ video_title + video_id);
+                alert("it worked! + "+ video_title + video_id + playlist_id);
                 // $('#load_playlist').load('/load_playlist')
            },
            error: function (data) {
